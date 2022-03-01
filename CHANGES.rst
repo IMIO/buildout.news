@@ -1,6 +1,9 @@
 1.0a2 (unreleased)
 ------------------
 
+- Use Gunicorn instead of Waitress.
+  [bsuttor]
+
 - Add py-spy for debugging.
   [bsuttor]
 
