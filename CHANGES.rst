@@ -1,7 +1,8 @@
 1.0.2 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Switch collective.solr from auto-checkout to 9.0.0a6 pinned buildout.smartweb version
+  [boulch]
 
 
 1.0.1-quick (2022-03-17)
