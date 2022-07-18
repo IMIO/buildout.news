@@ -54,6 +54,7 @@ services:
       - POSTGRES_PASSWORD=zope
     volumes:
       - smartweb_news-postgres:/var/lib/postgresql/data
+      - ./docker-entrypoint-initdb.d:/docker-entrypoint-initdb.d
   memcached:
     image: memcached:1.5.20
     command:
