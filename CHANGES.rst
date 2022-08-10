@@ -1,7 +1,10 @@
 1.0.7 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- imio.news.core 1.0a4
+
+    - WEB-3726 : Add subjects (keyword) in SearchableText
+      [boulch]
 
 
 1.0.6-quick (2022-07-18)
