@@ -1,6 +1,9 @@
 1.0.7 (unreleased)
 ------------------
 
+- Blobs are now on filesystem.
+  [bsuttor]
+
 - imio.news.core 1.0a4
 
     - WEB-3726 : Add subjects (keyword) in SearchableText
