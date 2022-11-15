@@ -1,6 +1,51 @@
 1.0.8 (unreleased)
 ------------------
 
+- imio.news.core 1.0
+
+    - Add multilingual features: New fields, vocabularies translations, restapi serializer
+      [laulaz]
+
+- imio.news.policy 1.0
+
+    - Add available languages to prepare for multilingual
+      [laulaz]
+
+    - Use collective.z3cform.select2 for taxonomy widget
+      [laulaz]
+
+    - Update buildout to use Plone 6.0.0a3 packages versions
+      [boulch]
+
+    - Add GenericSetup caching profile
+      [sverbois]
+
+- imio.smartweb.locales 1.0.8
+
+    - Add missing French translations (Sendinblue, multilingual)
+      [laulaz]
+
+- imio.smartweb.locales 1.0.7
+
+    - Add some directory fields translations
+      [boulch]
+
+    - Exclude profiles.zcml from translations
+      [laulaz]
+
+- imio.directory.common 1.0.9
+
+    - Add helper method to get language from smartweb REST requests This is needed for multilingual authentic sources
+      [laulaz]
+
+    - Allow to translate vocabulary terms titles in search-filters endpoint This is needed for multilingual authentic sources
+      [laulaz]
+
+- imio.directory.common 1.0.8
+
+    - MWEB-54 : Update TinyMCE : Add non breaking space option
+      [boulch]
+
 - imio.news.core 1.0a5
 
     - WEB-3757 : Automaticaly create some defaults newsfolders (with newsfolder subscription) when creating a new entity
