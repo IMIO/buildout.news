@@ -1,6 +1,12 @@
 1.1.0 (unreleased)
 ------------------
 
+
+- imio.news.policy 1.1.1
+
+    - Fix ugly/deprecated browserlayer Interface
+      [boulch]
+
 - imio.smartweb.common 1.1
 
     - Add monkeypatch to fix TTW resource calling See plone/Products.CMFPlone#3705
