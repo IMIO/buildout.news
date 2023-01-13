@@ -1,6 +1,9 @@
 1.1.0 (unreleased)
 ------------------
 
+- Update to Plone 6.0.0.2
+  [laulaz]
+
 - imio.smartweb.common 1.1.1
 
     - Allow to choose language for vocabulary term translation
