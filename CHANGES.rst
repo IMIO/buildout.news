@@ -1,6 +1,14 @@
 1.1.0 (unreleased)
 ------------------
 
+- imio.news.core 1.1.2
+
+    - Remove unused title_fr and description_fr metadatas
+      [laulaz]
+
+    - Remove SearchableText_fr (Solr will use SearchableText for FR)
+      [laulaz]
+
 - imio.smartweb.common 1.1.2
 
     - Call @@consent-json view on navigation root (instead of context)
