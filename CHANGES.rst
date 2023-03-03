@@ -1,6 +1,9 @@
 1.2.0 (unreleased)
 ------------------
 
+- Migrate to Plone 6.0.2
+  [boulch]
+
 - imio.smartweb.locales 1.1.2
 
     - WEB-3848 : Add missing translations
