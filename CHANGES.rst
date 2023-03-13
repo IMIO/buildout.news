@@ -1,7 +1,35 @@
 1.2.2 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Get collective.solr = 9.1.1 from buildout.smartweb/versions.cfg
+  [boulch]
+
+- imio.smartweb.locales 1.1.3
+
+    - Add missing French translations (Cirkwi & image dimensions warning)
+      [laulaz]
+
+    - Migrate to Plone 6.0.2
+      [boulch]
+
+- imio.news.core 1.1.3
+
+    - Add warning message if images are too small to be cropped
+      [laulaz]
+
+    - Migrate to Plone 6.0.2
+      [boulch]
+
+    - Fix reindex after cut / copy / paste in some cases
+      [laulaz]
+
+- imio.smartweb.common 1.1.4
+
+    - Allow to add portal messages when content images are too small for cropping. This can be done dynamically on a view call with a single line of code: show_warning_for_scales(self.context, self.request)
+      [laulaz]
+
+    - Migrate to Plone 6.0.2
+      [boulch]
 
 
 1.2.1-quick (2023-03-08)
