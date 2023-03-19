@@ -1,4 +1,4 @@
-1.2.2 (unreleased)
+1.2.2 (2023-03-19)
 ------------------
 
 - imio.smartweb.common 1.1.5
