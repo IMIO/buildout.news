@@ -1,7 +1,8 @@
 1.2.3 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Push images to prod registry.
+  [bsuttor]
 
 
 1.2.2 (2023-03-19)
