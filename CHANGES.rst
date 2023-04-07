@@ -1,7 +1,13 @@
 1.2.4 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- imio.news.policy 1.1.3
+
+    - Add module : collective.messagesviewlet
+      [boulch]
+
+    - Migrate to Plone 6.0.2
+      [boulch]
 
 
 1.2.3-quick (2023-03-20)
