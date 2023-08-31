@@ -1,6 +1,14 @@
 1.2.5 (unreleased)
 ------------------
 
+- Get pas.plugins.imio 2.0.9 from buildout.smartweb
+
+    - Fix login could be id of user.
+      [bsuttor]
+
+    - Fix byte convertion error on python3.
+      [bsuttor]
+
 - imio.smartweb.common 1.1.8
 
     - WEB-3960 : Clean unhautorized xml chars out of text when added or modified contents Temporary patch.
