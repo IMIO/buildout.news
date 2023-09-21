@@ -1,6 +1,14 @@
 1.2.5 (unreleased)
 ------------------
 
+- imio.news.core 1.1.4
+
+    - WEB-3989 : Fix infinite loop on object deletion
+      [laulaz]
+
+    - Migrate to Plone 6.0.4
+      [boulch]
+
 - Get pas.plugins.imio 2.0.9 from buildout.smartweb
 
     - Fix login could be id of user.
