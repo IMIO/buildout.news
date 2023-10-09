@@ -1,6 +1,13 @@
 1.2.5 (unreleased)
 ------------------
 
+- imio.news.policy 1.1.4
+
+    - WEB-3954 : Hide cropping action on Image type
+      [boulch]
+    - Migrate to Plone 6.0.4
+      [boulch]
+
 - imio.news.core 1.1.4
 
     - WEB-3989 : Fix infinite loop on object deletion
