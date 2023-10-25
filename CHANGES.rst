@@ -1,6 +1,14 @@
 1.2.6 (unreleased)
 ------------------
 
+- imio.news.core 1.2
+
+    - WEB-3985 : Use new portrait / paysage scales & logic
+      [boulch, laulaz]
+
+    - WEB-3985 : Remove old cropping information when image changes
+      [boulch, laulaz]
+
 - imio.smartweb.common 1.2
 
     - WEB-3985 : New portrait / paysage scales & logic.
