@@ -1,6 +1,9 @@
 1.2.6 (unreleased)
 ------------------
 
+- Develop collective.solr to implement https connection DEVOPS-3
+  [remdub]
+
 - imio.news.core 1.2
 
     - WEB-3985 : Use new portrait / paysage scales & logic
