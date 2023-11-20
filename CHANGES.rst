@@ -1,6 +1,61 @@
 1.2.6 (unreleased)
 ------------------
 
+- imio.smartweb.common 1.2.2
+
+    - Fix missing values for facilities lists (causing None in REST views filters) See collective/collective.solr#366
+      [laulaz]
+
+    - Fix last upgrade steps: when run from command line, we need to adopt admin user to find private objects
+      [laulaz]
+
+    - WEB-4003 : Fix missing TextField mimetypes
+      [laulaz]
+
+- imio.smartweb.common 1.2.1
+
+    - SUP-33128 : Fix eea.facetednavigation : Hide items with 0 results
+      [boulch, laz]
+
+    - Refactor less and js compilation + Add compilations files
+      [boulch]
+
+- imio.smartweb.locales 1.1.9
+
+    - WEB-4018 : Add missing French translations (new termes in directory vocabulary)
+      [boulch]
+  
+- imio.smartweb.locales 1.1.8
+
+    - Add missing French translations
+      [laulaz]
+
+- imio.smartweb.locales 1.1.7
+
+    - Add missing French translations
+      [boulch]
+
+    - Update translations
+      [boulch]
+
+- imio.smartweb.locales 1.1.6
+
+    - Add missing French translations (external content section and contact section)
+      [boulch]
+
+- imio.smartweb.locales 1.1.5
+
+    - Add missing translations
+      [boulch]
+
+- imio.smartweb.locales 1.1.4
+
+    - Add missing French translation (folder_contents properties)
+      [laulaz]
+
+    - Migrate to Plone 6.0.4
+      [boulch]
+
 - Develop collective.solr to implement https connection DEVOPS-3
   [remdub]
 
