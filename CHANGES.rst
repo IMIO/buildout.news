@@ -1,6 +1,17 @@
 1.3.4 (unreleased)
 ------------------
 
+- imio.news.core 1.2.2
+
+    - WEB-4072, WEB-4073 : Enable solr.fields behavior on some content types
+      [remdub]
+
+    - WEB-4006 : Exclude some content types from search results
+      [remdub]
+
+    - MWEBRCHA-13 : Add versioning on imio.news.NewsItem
+      [boulch]
+
 - collective.solr 9.3.0
 
     - Add support of https connections
