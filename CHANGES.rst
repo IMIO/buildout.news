@@ -1,7 +1,10 @@
 1.3.5 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- imio.news.core 1.2.3
+
+    - WEB-4068 : Adding news in any news folders where user have rights
+      [boulch]
 
 
 1.3.4 (2024-03-05)
