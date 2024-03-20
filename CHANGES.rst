@@ -1,6 +1,11 @@
 1.3.5 (unreleased)
 ------------------
 
+- imio.news.core 1.2.4
+
+    - WEB-4068 : Add field to limit the new feature "adding news in any news folders" to some entities
+      [boulch]
+
 - imio.news.core 1.2.3
 
     - WEB-4068 : Adding news in any news folders where user have rights
