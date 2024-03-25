@@ -1,6 +1,11 @@
 1.3.5 (unreleased)
 ------------------
 
+- imio.news.core 1.2.5
+
+    - Fix template for translations
+      [boulch]
+
 - imio.smartweb.locales 1.1.13
 
     - Add missing fr, nl, de translations
