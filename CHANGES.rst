@@ -1,6 +1,14 @@
 1.3.5 (unreleased)
 ------------------
 
+- imio.smartweb.locales 1.1.13
+
+    - Add missing fr, nl, de translations
+      [boulch]
+
+    - Update translations
+      [boulch]
+
 - imio.news.core 1.2.4
 
     - WEB-4068 : Add field to limit the new feature "adding news in any news folders" to some entities
