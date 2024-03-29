@@ -1,7 +1,10 @@
 1.3.6 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- imio.news.core 1.2.6
+
+    - MWEBPM-9 : Add container_uid as metadata_field to retrieve news folder id/title in news serializer and set it in our json dataset
+      [boulch]
 
 
 1.3.5 (2024-03-25)
