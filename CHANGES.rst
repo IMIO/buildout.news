@@ -1,6 +1,11 @@
 1.3.6 (unreleased)
 ------------------
 
+- imio.news.core 1.2.7
+
+    - Fix : serializer and message "At least one of these parameters must be supplied: path, UID"
+      [boulch]
+
 - imio.news.core 1.2.6
 
     - MWEBPM-9 : Add container_uid as metadata_field to retrieve news folder id/title in news serializer and set it in our json dataset
