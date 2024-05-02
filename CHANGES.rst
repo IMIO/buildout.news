@@ -1,6 +1,12 @@
 1.3.7 (unreleased)
 ------------------
 
+- imio.smartweb.common 1.2.11
+
+    - WEB-4101 : Fix vocabulary terms translation (for Topics only - for the moment)
+      when used with `AjaxSelectFieldWidget`
+      [laulaz]
+
 - imio.smartweb.common 1.2.10
 
     - WEB-4101 : Change Topics field widget to keep value ordering
