@@ -1,7 +1,10 @@
 1.3.7 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- imio.news.core 1.2.8
+
+    - WEB-4101 : Use local category (if any) instead of category in `category_title` indexer
+      [laulaz]
 
 
 1.3.6 (2024-04-04)
