@@ -1,6 +1,14 @@
 1.3.7 (unreleased)
 ------------------
 
+- imio.smartweb.common 1.2.10
+
+    - WEB-4101 : Change Topics field widget to keep value ordering
+      [laulaz]
+
+    - WEB-4088 : Implement some odwb utils and generic classes
+      [boulch]
+
 - imio.news.core 1.2.8
 
     - WEB-4101 : Use local category (if any) instead of category in `category_title` indexer
