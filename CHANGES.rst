@@ -1,6 +1,9 @@
 1.3.7 (unreleased)
 ------------------
 
+- Migrate buildout to Plone 6.0.9 (was already partly done)
+  [laulaz]
+
 - imio.smartweb.common 1.2.11
 
     - WEB-4101 : Fix vocabulary terms translation (for Topics only - for the moment)
