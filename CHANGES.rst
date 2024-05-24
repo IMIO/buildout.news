@@ -1,6 +1,77 @@
 1.3.7 (unreleased)
 ------------------
 
+- imio.smartweb.locales 1.1.18
+
+    - Add missing FR translations
+      [laulaz]
+
+- imio.smartweb.locales 1.1.17
+
+    - Add missing fr/de/nl translations for Skip to content/navigation/footer
+      [boulch]
+
+    - Update translations
+      [boulch]
+
+- imio.smartweb.locales 1.1.16
+
+    - Add missing French translations for `Carre` & categories / topics display on items
+      [laulaz]
+
+    - Add missing fr, nl, de translations
+      [boulch]
+
+    - Update translations
+      [boulch]
+
+- imio.smartweb.locales 1.1.15
+
+    - Add missing fr, nl, de translations
+      [boulch]
+
+- imio.smartweb.locales 1.1.14
+
+    - Add missing fr, nl, de translations
+      [boulch]
+
+    - Update translations
+      [boulch]
+
+- imio.smartweb.common 1.2.14
+
+    - Fix bundles: Remove obsolete patterns bundle and fix a previous upgrade for
+      eea.facetednavigation
+      [laulaz]
+
+    - Fix translate call (was causing incorrect string in .po file)
+      [laulaz]
+
+    - Fix translation message string
+      [laulaz]
+
+- imio.smartweb.common 1.2.13
+
+    - WEB-4088 : Cover use case for sending data in odwb for a staging environment
+      [boulch]
+
+    - Ensure translation of vocabularies when used with `AjaxSelectFieldWidget`
+      [laulaz]
+
+    - Remove useless `container_uid` from `search-filters` results
+      [laulaz]
+
+    - WEB-3864 : Ensure that a taxonomy term that is deleted is not used anywhere
+      [boulch]
+
+    - WEB-3862 : Unpatch (restore original) eea.facetednavigation jquery
+      [laulaz]
+
+- imio.smartweb.common 1.2.12
+
+    - WEB-4102 : Add second skip to footer
+      [thomlamb]
+
 - Migrate buildout to Plone 6.0.9 (was already partly done)
   [laulaz]
 
