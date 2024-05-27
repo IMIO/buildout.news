@@ -1,6 +1,25 @@
 1.3.7 (unreleased)
 ------------------
 
+- imio.smartweb.common 1.2.15
+
+    - Fix missing ZCML dependency
+      [laulaz]
+
+- imio.news.core 1.2.9
+
+    - WEB-4101 : Add index for local category search
+      [laulaz]
+
+    - Fix bad permission name
+      [laulaz]
+
+    - WEB-4088 : Cover use case for sending data in odwb for a staging environment
+      [boulch]
+
+    - WEB-4088 : Add some odwb endpoints (for news , for entities)
+      [boulch]
+
 - imio.smartweb.locales 1.1.18
 
     - Add missing FR translations
