@@ -1,7 +1,10 @@
 1.3.8 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- imio.news.core 1.2.10
+
+    - WEB-4088 : Fix missing include in zcml for ODWB endpoints
+      [laulaz]
 
 
 1.3.7 (2024-05-30)
