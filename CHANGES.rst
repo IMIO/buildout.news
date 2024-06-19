@@ -1,7 +1,10 @@
 1.3.10 (unreleased)
 -------------------
 
-- Nothing changed yet.
+- imio.news.core 1.2.12
+
+    - Add news lead image (preview scale) for odwb
+      [boulch]
 
 
 1.3.9 (2024-06-10)
