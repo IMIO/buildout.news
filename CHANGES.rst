@@ -1,6 +1,9 @@
 1.3.10 (unreleased)
 -------------------
 
+- Upgrade docker image to Ubuntu 22.04
+  [remdub]
+
 - imio.news.core 1.2.13
 
     - WEB-4088 : Use one state workflow for imio.news.NewsFolder / imio.news.Folder
