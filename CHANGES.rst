@@ -1,8 +1,12 @@
-1.3.10 (unreleased)
+1.3.11 (unreleased)
 -------------------
 
 - Upgrade docker image to Ubuntu 22.04
   [remdub]
+
+
+1.3.10-quick (2024-06-21)
+-------------------------
 
 - imio.news.core 1.2.13
 
