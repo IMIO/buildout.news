@@ -1,7 +1,8 @@
 1.4.2 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Sync gunicorn version with Plone 6.0.9
+  [remdub]
 
 
 1.4.1 (2024-07-31)
