@@ -1,7 +1,10 @@
 1.4.4 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- imio.news.policy 1.1.6
+
+    - WEB-4153: Increase caching values
+      [remdub]
 
 
 1.4.3 (2025-01-09)
