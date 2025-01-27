@@ -1,4 +1,4 @@
-FROM harbor.imio.be/common/plone-base:6.0.9-ubuntu as builder
+FROM harbor.imio.be/common/plone-base:6.0.14 as builder
 LABEL maintainer="Benoît Suttor <benoit.suttor@imio.be>"
 ENV PIP=24.3.1 \
   ZC_BUILDOUT=3.3 \
@@ -28,17 +28,16 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
   python3-pip \
   wget \
   zlib1g-dev \
-  && pip3 install --no-cache-dir pip==$PIP setuptools==$SETUPTOOLS zc.buildout==$ZC_BUILDOUT py-spy
+  && pip3 install --no-cache-dir pip==$PIP setuptools==$SETUPTOOLS zc.buildout==$ZC_BUILDOUT py-spy --break-system-packages
 
 WORKDIR /plone
 
-# COPY --chown=imio --from=docker-staging.imio.be/smartweb/news:latest /plone/eggs/ /plone/eggs/
 COPY --chown=imio *.cfg /plone/
 COPY --chown=imio scripts /plone/scripts
 COPY --chown=imio templates /plone/templates
 RUN su -c "buildout -c prod.cfg -t 30 -N" -s /bin/sh imio
 
-FROM harbor.imio.be/common/plone-base:6.0.9-ubuntu
+FROM harbor.imio.be/common/plone-base:6.0.14
 ENV PIP=24.3.1 \
   ZC_BUILDOUT=3.3 \
   SETUPTOOLS=75.6.0 \
@@ -59,13 +58,11 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
   libmemcached11 \
   libopenjp2-7 \
   libpq5 \
-  libtiff5 \
+  libtiff5-dev \
   libxml2 \
   libxslt1.1 \
   lynx \
-  netcat \
   poppler-utils \
-  python3-distutils \
   rsync \
   wget \
   wv \
@@ -73,7 +70,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
   && rm -rf /var/lib/apt/lists/*
 RUN curl -L https://github.com/Yelp/dumb-init/releases/download/v1.2.5/dumb-init_1.2.5_amd64.deb > /tmp/dumb-init.deb && dpkg -i /tmp/dumb-init.deb && rm /tmp/dumb-init.deb
 COPY --chown=imio --from=builder /plone .
-COPY --from=builder /usr/local/lib/python3.10/dist-packages /usr/local/lib/python3.10/dist-packages
+COPY --from=builder /usr/local/lib/python3.12/dist-packages /usr/local/lib/python3.12/dist-packages
 COPY --from=builder /usr/local/bin/py-spy /usr/local/bin/py-spy
 COPY --chown=imio docker-initialize.py docker-entrypoint.sh /
 
