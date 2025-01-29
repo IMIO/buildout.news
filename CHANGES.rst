@@ -1,4 +1,4 @@
-1.4.5 (unreleased)
+1.4.5 (2025-01-29)
 ------------------
 
 - Migrate to Python 3.12, Plone 6.0.14
