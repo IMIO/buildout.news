@@ -1,6 +1,32 @@
 1.4.8 (unreleased)
 ------------------
 
+- imio.smartweb.common 1.2.27
+
+    - WEB-4122 : Create adapter/validator to filter valid image mimetype in our solutions
+      [boulch]
+
+- imio.smartweb.common 1.2.26
+
+    - WEB-4212: Fixe i18n:domain for skip to content
+      [thomlamb]
+
+- imio.smartweb.common 1.2.25
+
+    - WEB-4232 : Fix JQuery.
+      Version 1.2.24 contained issues affecting the smooth running of the preventing deletion of a taxonomy term
+      [boulch]
+
+- imio.smartweb.common 1.2.24
+
+    - WEB-4232 : Refactoring of the code that prevents the deletion of a taxonomy term if it is used in at least one object
+      [boulch]
+
+- imio.smartweb.common 1.2.23
+
+    - WEB-3718 : Accessibility : Add aria-label for consent buttons
+      [boulch]
+
 - WEB-4226 : Use waitress instead of gunicorn
   The issue leading to a high load with waitress has been fixed in waitress 3.0.1
   See https://github.com/Pylons/waitress/pull/435
