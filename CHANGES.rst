@@ -1,7 +1,10 @@
 1.4.8 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- WEB-4226 : Use waitress instead of gunicorn
+  The issue leading to a high load with waitress has been fixed in waitress 3.0.1
+  See https://github.com/Pylons/waitress/pull/435
+  [remdub]
 
 
 1.4.7 (2025-02-24)
