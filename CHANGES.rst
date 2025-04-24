@@ -1,7 +1,7 @@
 1.4.9 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Update to Plone 6.1.1 
 
 
 1.4.8 (2025-03-19)
