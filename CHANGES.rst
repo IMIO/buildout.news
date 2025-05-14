@@ -1,7 +1,103 @@
 1.4.9 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- imio.smartweb.locales 1.1.29
+
+    - Update dev environment to Plone 6.1-latest
+      [remdub]
+
+- imio.news.core 1.2.15
+
+    - Update Python classifiers to be compatible with Python 3.13
+      [remdub]
+
+    - Upgrade dev environment to Plone 6.1-latest
+      [remdub]
+
+    - Update Python classifiers to be compatible with Python 3.12
+      [remdub]
+
+    - Migrate to Plone 6.0.14
+      [boulch]
+
+    - WEB-4119 : Prevent removing news folder if there is at least 1 news in it
+      [boulch]
+
+- imio.news.policy 1.1.7
+
+    - Upgrade dev environment to Plone 6.1-latest
+      [remdub]
+
+    - Update Python classifiers to be compatible with Python 3.13
+      [remdub]
+
+    - Update Python classifiers to be compatible with Python 3.12
+      [remdub]
+
+    - Migrate to Plone 6.0.14
+      [boulch]
+
+- imio.smartweb.common 1.2.30
+
+    - Upgrade missing TinyMCE settings to version 7
+      [remdub]
+
+- imio.smartweb.common 1.2.29
+
+    - Upgrade TinyMCE settings to version 7
+      [remdub]
+
+- imio.smartweb.common 1.2.28
+
+    - Upgrade dev environment to Plone 6.1-latest
+      [remdub]
+
+    - Add tests for Plone 6.1-latest and add Python 3.13
+      [remdub]
+
+- collective.upgrade (plone61 branch)
+
+    - Portal_properties is no longer a persistent tool (Plone 6.1 compatibility)
+      [bsuttor]
+
+- zope.session 5.1
+
+    - Python 3.10, 3.11 compatibility
+      For more details, see : https://raw.githubusercontent.com/zopefoundation/zope.session/refs/heads/master/CHANGES.rst
+
+- z3c.unconfigure 2.1
+
+    - Python 3.12, 3.13 compatibility
+      For more details, see : https://raw.githubusercontent.com/zopefoundation/z3c.unconfigure/refs/heads/master/CHANGES.rst
+
+- z3c.jbot 2.2
+
+    - Drop support for Python 3.8
+      For more details, see : https://raw.githubusercontent.com/zopefoundation/z3c.jbot/refs/heads/master/CHANGES.rst
+
+- RelStorage 4.1.1
+
+    - Python 3.13 compatibility
+      For more details, see : https://raw.githubusercontent.com/zodb/relstorage/refs/heads/master/CHANGES.rst
+
+- psycopg2 2.9.10
+
+    - Python 3.13 compatibility
+      For more details, see : https://raw.githubusercontent.com/psycopg/psycopg2/refs/heads/master/NEWS
+
+- plone.gallery 1.1.6
+
+    - For more details, see : https://raw.githubusercontent.com/plone/plone.gallery/refs/heads/master/CHANGES.rst
+
+- pas.plugins.authomatic 2.0.0rc3
+
+    - Pinned new version for Plone 6.1 compatibility
+      For more details, see : https://raw.githubusercontent.com/collective/pas.plugins.authomatic/refs/heads/main/CHANGELOG.md
+
+- pas.plugins.imio 2.1
+
+    - Plone 6.1 compatibility.
+      [remdub]
 
 
 1.4.8 (2025-03-19)
