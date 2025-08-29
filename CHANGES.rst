@@ -1,7 +1,10 @@
 1.5.3 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- imio.news.policy 1.1.8
+
+    - KEYC-23 : Add upgrade step to install kimug
+      [bsuttor]
 
 
 1.5.2 (2025-06-25)
