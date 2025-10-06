@@ -1,7 +1,29 @@
 1.6.3 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- imio.news.core 1.2.17
+
+    - WEB-4307: Fix zcml override for fc-delete action (trash icon in folder_contents)
+      [boulch]
+
+    - SUP-46633 : Refactored deletion checks: ignore news items when counting apply restriction only to news folders or folders containing items.
+      [boulch]
+
+- imio.smartweb.common 1.2.37
+
+    - Add new @find endpoint to find content in instance
+      [boulch]
+
+- imio.smartweb.common 1.2.36
+
+    - WEB-4278 : Create translated (de) iam vocabulary for e-guichet (citizen project)
+      [boulch]
+
+    - WEB-4278 : Create translated (de) topics vocabulary for e-guichet (citizen project)
+      [boulch]
+
+    - WEB-4269 : Add Horizontal Rule option to the insert menu in TinyMCE
+      [remdub]
 
 
 1.6.2 (2025-09-30)
