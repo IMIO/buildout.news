@@ -1,7 +1,10 @@
 1.6.7 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- imio.smartweb.common 1.2.42
+
+    - Add a new type of request in @find endpoint
+      [boulch]
 
 
 1.6.6 (2025-11-30)
