@@ -1,7 +1,13 @@
 1.6.8 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- imio.news.core 1.2.18
+
+    - WEB-4366 : Add RAM caching to @search endpoint. Try to reduce latency
+      [boulch]
+
+    - Migrate to Plone 6.1.3
+      [boulch]
 
 
 1.6.7 (2025-12-11)
