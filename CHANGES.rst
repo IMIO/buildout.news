@@ -1,7 +1,32 @@
 1.6.9 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- imio.news.core 1.2.19
+
+    - WEB-4366 : Enhance @search caching endpoint.
+      [boulch]
+
+- imio.smartweb.common 1.2.45
+
+    - Implement a function to get a parent from object acquisition with a specific interface
+      [boulch]
+
+    - Change OMNIA default staging url
+      [boulch]
+
+- imio.smartweb.common 1.2.44
+
+    - Change french text to (default) english
+      [boulch]
+
+- imio.smartweb.common 1.2.43
+
+    - OIA-109 : Refactor "CategorizeContent" feature from imio.smartweb.core to imio.smartweb.common
+      [boulch]
+
+    - OIA-109 : Refactor "suggested titles" feature from imio.smartweb.core to imio.smartweb.common
+      Use it as a behavior <element value="imio.smartweb.ia.titles"/> (instead of plone.basic)
+      [boulch]
 
 
 1.6.8 (2026-02-08)
