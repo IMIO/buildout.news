@@ -1,7 +1,10 @@
 1.6.10 (unreleased)
 -------------------
 
-- Nothing changed yet.
+- imio.news.core 1.2.20
+
+    - WEB-4366 : Fix : Ensure we've got UID in good format
+      [boulch]
 
 
 1.6.9 (2026-02-09)
