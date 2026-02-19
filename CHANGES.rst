@@ -1,7 +1,11 @@
 1.6.11 (unreleased)
 -------------------
 
-- Nothing changed yet.
+- imio.news.core 1.2.21
+
+    - WEB-4366 : Add entity_uid in request to return good entity data
+      when we get data from cache with missing/removed selected_news_folders
+      [boulch]
 
 
 1.6.10 (2026-02-10)
