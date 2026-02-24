@@ -1,7 +1,10 @@
 1.6.12 (unreleased)
 -------------------
 
-- Nothing changed yet.
+- imio.news.core 1.2.22
+
+    - UNDO RAM caching to @search endpoint - too many side effects
+      [boulch]
 
 
 1.6.11 (2026-02-23)
