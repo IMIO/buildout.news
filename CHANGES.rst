@@ -1,7 +1,31 @@
 1.6.13 (unreleased)
 -------------------
 
-- Nothing changed yet.
+- imio.news.core 1.2.23
+    - OIA-109 : IPA : Add ia "CategorizeContent" and titles proposal generation features on imio.events.Event
+      [boulch]
+
+    - WEB-4366 : Refactor @search caching endpoint to use entity_uid instead of newsfolder_uid to avoid some side effects and cache misses when news folders are added/removed/changed for an entity
+      [boulch]
+
+- imio.smartweb.common 1.2.47
+
+    - OIA-109 : OMNIA : Add some fields to check to be able to "CategorizeContent" with imio.directory.Contact
+      [boulch]
+
+- imio.smartweb.common 1.2.46
+
+    - WEB-4373 : Send JWT Bearer token in all Omnia/IPA API requests
+      [remdub]
+
+    - OIA-118 : Consuming the make_accessible endpoint in TinyMCE
+      [boulch]
+
+    - WEB-4366 : Add entity_uid to ignored params for search-filters endpoint to avoid catalog warning
+      [boulch]
+
+    - CITIBDC-507 : Don't send data to ODWB when in preprod environment
+      [remdub]
 
 
 1.6.12 (2026-02-24)
