@@ -1,7 +1,10 @@
 1.6.14 (unreleased)
 -------------------
 
-- Nothing changed yet.
+- imio.news.core 1.2.24
+    
+    - OIA-109 : OMNIA : Add ia "CategorizeContent" and titles proposal generation features on imio.news.NewsItem
+      [boulch]
 
 
 1.6.13 (2026-03-16)
