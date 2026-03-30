@@ -1,6 +1,9 @@
 1.6.14 (unreleased)
 -------------------
 
+- WEB-4366 : Increase target number of objects in memory per cache
+  [boulch]
+
 - imio.news.core 1.2.24
     
     - OIA-109 : OMNIA : Add ia "CategorizeContent" and titles proposal generation features on imio.news.NewsItem
