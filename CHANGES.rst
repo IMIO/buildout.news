@@ -1,6 +1,11 @@
 1.6.15 (unreleased)
 -------------------
 
+- imio.news.core 1.2.26
+
+    - Fix image URL for ODWB using DOMAINS env variable and add upgrade step to resend all published news to ODWB
+      [boulch]
+
 - imio.news.core 1.2.25
 
     - WEB-4406: Attempt to fix missing lead images in ODWB preview (preview.html is an unwanted entry, hard to reproduce in staging)
