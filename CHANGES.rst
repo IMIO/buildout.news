@@ -1,7 +1,10 @@
 1.6.15 (unreleased)
 -------------------
 
-- Nothing changed yet.
+- imio.news.core 1.2.25
+
+    - WEB-4406: Attempt to fix missing lead images in ODWB preview (preview.html is an unwanted entry, hard to reproduce in staging)
+      [boulch]
 
 
 1.6.14 (2026-03-30)
