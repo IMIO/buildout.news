@@ -1,7 +1,10 @@
 1.6.16 (unreleased)
 -------------------
 
-- Nothing changed yet.
+- imio.news.core 1.2.27
+
+    - Refactor ODWB endpoint to use generator-based batching and add Entity context support
+      [boulch]
 
 
 1.6.15 (2026-04-13)
