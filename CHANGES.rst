@@ -1,7 +1,8 @@
 1.6.17 (unreleased)
 -------------------
 
-- Nothing changed yet.
+- DEVOPS-314 : Dummy release, verifying recent CI/CD pipeline updates. No application changes.
+  [remdub]
 
 
 1.6.16-quick (2026-04-14)
