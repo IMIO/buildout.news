@@ -1,4 +1,4 @@
-1.6.17 (unreleased)
+1.6.17 (2026-04-14)
 -------------------
 
 - DEVOPS-314 : Dummy release, verifying recent CI/CD pipeline updates. No application changes.
