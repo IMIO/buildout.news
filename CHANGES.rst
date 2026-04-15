@@ -1,7 +1,10 @@
 1.6.18 (unreleased)
 -------------------
 
-- Nothing changed yet.
+- imio.news.core 1.2.28
+
+    - Refactor ODWB remove() method to reuse get_news() — supports all contexts like reply()
+      [boulch]
 
 
 1.6.17 (2026-04-14)
