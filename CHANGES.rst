@@ -1,6 +1,14 @@
 1.6.19 (unreleased)
 -------------------
 
+- pas.plugins.kimug 1.5.5
+
+  - When creating a new user from an `oidc_sso_apps` token, missing `email` is defaulted to `{username}@kimug.be` and missing `firstName`/`lastName` are defaulted to `{username}` / `"sso-apps"`.
+    [remdub]
+
+  - `_decode_token` for `oidc_sso_apps` now reads the JWT audience from `SSO_APPS_AUDIENCE` env var, falling back to `SSO_APPS_CLIENT_ID` and then `"imio-apps-plone"`.
+    [remdub]
+
 - pas.plugins.kimug 1.5.4
 
   - Set log level to info for pas.plugins.kimug logger
