@@ -1,6 +1,37 @@
 1.6.19 (unreleased)
 -------------------
 
+- imio.smartweb.common 1.2.54
+
+    - CITIBDC-585: Register topics as a Collection criterion
+      [boulch]
+
+- imio.smartweb.common 1.2.53
+
+    - WEB-4423 : Use RateLimiter in geocode_object to respect Nominatim's 1 req/s policy and catch GeocoderRateLimited so bulk imports are not aborted on 429.
+      [remdub]
+
+- imio.smartweb.common 1.2.52
+
+    - Add timeouts for requests
+      [boulch]
+
+    - Add _has_children_of_type filter to search_from_json
+      [boulch]
+
+    - Use WEBSITE_HOSTNAME env var as Host header for BAN requests, falling back to portal.absolute_url() netloc. Adapt tests accordingly.
+      [remdub]
+
+- imio.smartweb.common 1.2.51
+
+    - WEB-4404 : Fix ban_physicalpath: fall back to HTTP_HOST when X-Forwarded-Host is absent (direct Varnish → Plone topology). Add tests for caching.py.
+      [remdub]
+
+- imio.smartweb.common 1.2.50
+
+    - WEB-4367 : Add avif to allowed image types
+      [thomlamb]
+
 - pas.plugins.kimug 1.6.0
 
   - Refactor the control panel so SSO applications (apps) settings can be configured easily.
