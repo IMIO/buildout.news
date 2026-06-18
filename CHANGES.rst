@@ -1,7 +1,10 @@
 1.6.21 (unreleased)
 -------------------
 
-- Nothing changed yet.
+- pas.plugins.kimug 1.7.2
+
+    - Add reviewer roles to sso-apps users
+      [remdub]
 
 
 1.6.20-quick (2026-06-18)
