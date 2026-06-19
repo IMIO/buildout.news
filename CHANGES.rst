@@ -1,6 +1,11 @@
 1.6.22 (unreleased)
 -------------------
 
+- imio.news.policy 1.1.10
+
+    - Migrate to Plone 6.1.4
+      [remdub]
+
 - imio.news.policy 1.1.9
 
     - KEYC-77: Remove pas.plugins.imio from dependencies
