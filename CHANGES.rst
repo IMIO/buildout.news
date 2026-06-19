@@ -1,7 +1,13 @@
 1.6.22 (unreleased)
 -------------------
 
-- Nothing changed yet.
+- imio.news.policy 1.1.9
+
+    - KEYC-77: Remove pas.plugins.imio from dependencies
+      [remdub]
+
+    - Migrate to Plone 6.1.3
+      [boulch]
 
 
 1.6.21-quick (2026-06-18)
