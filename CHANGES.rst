@@ -1,6 +1,58 @@
 1.6.24 (unreleased)
 -------------------
 
+- imio.news.policy 1.1.11
+
+    - Update to Plone 6.1.5 and buidlout 5-x versions.
+      [boulch]
+
+    - OIA-106 : Install and use imio.omnia.tinymce
+      [boulch]
+
+- imio.smartweb.common 1.2.56
+
+    - update to Plone 6.1.5 and buidlout 5-x versions
+      [bouch]
+
+    - OIA-106: Remove the legacy IA TinyMCE plugins SELECTIVELY in the 1039->1040
+      upgrade (Python handler) instead of purging the whole ``plone.custom_plugins``
+      list, so plugins appended by other add-ons (e.g. ``omnia`` from
+      imio.omnia.tinymce) are preserved regardless of upgrade ordering.
+      [boulch]
+
+    - OIA-106 : Remove the IA tools from TinyMCE (custom plugins, IA menu and toolbar button),
+      unregister the ``tinymce.js`` resource and drop the now-unused JS files.
+      Upgrade step 1039 -> 1040.
+      [boulch]
+
+    - OIA-106 : Get the IA service URL and authentication from ``imio.omnia.core``
+      (``IOmniaCoreAPIService`` adapter) instead of the local ``IPA_URL`` /
+      ``APPLICATION_ID`` / ``PROJECT_ID`` constants, which are removed from
+      ``config.py``. Impacts the suggested titles / categorization views and the
+      categorization widget.
+      [boulch]
+
+    - OIA-106 : Pre-fill the ``imio.omnia.core`` control panel fields
+      ``application_id`` and ``organization_id`` from the legacy ``application_id``
+      and ``PROJECT_ID`` env vars (on install and via upgrade step 1040 -> 1041),
+      unless already set.
+      [boulch]
+
+    - OIA-106 : Set the ``imio.omnia.core`` control panel default settings
+      (``core_api_url`` and ``enable_proxy``) on install and via upgrade step
+      1041 -> 1042. Configuration moved from ``imio.smartweb.policy``.
+      [boulch]
+
+- imio.smartweb.common 1.2.55
+
+    - Resolve the directory base URL for the remote entities vocabulary from the
+      ``imio.smartweb.common.directory_url`` registry record (falls back to the
+      ``DIRECTORY_URL`` env var / default).
+      [boulch]
+
+    - Reduce ``@search`` ``b_size`` to 3000.
+      [boulch]
+
 - Update to Plone 6.1.5 and buidlout 5-x versions.
   [boulch]
 
