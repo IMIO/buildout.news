@@ -1,7 +1,8 @@
 1.6.24 (unreleased)
 -------------------
 
-- Nothing changed yet.
+- Update to Plone 6.1.5 and buidlout 5-x versions.
+  [boulch]
 
 
 1.6.23-quick (2026-06-23)
