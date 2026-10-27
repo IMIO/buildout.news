@@ -1,7 +1,52 @@
 1.6.25 (unreleased)
 -------------------
 
-- Nothing changed yet.
+- imio.smartweb.locales 1.1.34 => 1.1.51
+
+    - Add some translations for smartweb instances
+      [boulch]
+
+    - Update translations
+      [boulch]
+
+- imio.news.core 1.2.29
+
+    - Search endpoints (``@search``, ``@search_entity``, ``@search_newsfolder_for_entity``,
+      ``@search_newsitems``) : the ``Last-Modified`` header and the ETag now use the time of
+      the last change in the news of the entity (``entity_uid`` or ``UID`` parameter).
+      Before, they used the modification date of the site. Varnish then always got a 304
+      and kept the old results. When the entity is not known, no 304 is sent.
+      [boulch]
+
+    - Search endpoints : a change on a news item now also clears the cache of the entities
+      whose news folders show this news item (``populating_newsfolders``), also after a move.
+      [boulch]
+
+    - Search endpoints : after the commit of a change in the news, send a BAN of the search
+      endpoints to the Varnish servers (``CACHING_SERVERS``). The clients get the new results
+      at once, not after the end of the Varnish TTL. Send the BAN only one time for each
+      transaction, and not when the transaction fails.
+      Requires imio.smartweb.common >= 1.2.62 (``ban_physicalpath`` sends the BAN after the
+      commit).
+      [boulch]
+
+    - Migrate dev environment to Plone 6.1.5 & buildout 5
+      [remdub]
+    - WEB-4467 : Update the delete action permission check to allow owners to delete their own
+      NewsFolder without requiring ``Delete objects`` on the parent Entity.
+      [boulch]
+
+    - WEB-4467: Run the faceted navigation configuration with temporary Manager privileges,
+      allowing local Contributors to add NewsFolders without granting Editor or
+      Reviewer permissions on the Entity workflow.
+      [boulch]
+
+- imio.smartweb.common 1.2.56 => 1.2.63
+
+    - WEB-4404 : Add a ``lastBan`` ETag component, the time of the site's last
+      BAN. A BAN (message, footer, hero banner) now changes the pages ETag, so
+      browsers get the new page instead of a 304.
+      [remdub]
 
 
 1.6.24 (2026-07-07)
