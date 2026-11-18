@@ -5,6 +5,11 @@
   ``plone62`` branch of buildout.smartweb.
   [boulch]
 
+- Add plone.observability, as in buildout.smartweb: health probes on port
+  8081 (``/live``, ``/ready``, ``/startup``), ``@@metrics`` endpoint and
+  OpenTelemetry tracing (inactive until ``OTEL_EXPORTER_OTLP_ENDPOINT`` is set).
+  [boulch]
+
 
 1.6.26 (2026-11-12)
 -------------------
