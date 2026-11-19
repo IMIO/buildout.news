@@ -10,6 +10,19 @@
   OpenTelemetry tracing (inactive until ``OTEL_EXPORTER_OTLP_ENDPOINT`` is set).
   [boulch]
 
+- WEB-4533 : Add ``make test``: build the production image, boot it with Postgres and
+  memcached, and run smoke tests (``IMIO/gha`` ``plone-image-test-notify`` checks plus
+  ``tests/test_news.py``). CI runs them on pull requests. ``plone62.yml`` builds the
+  ``plone62`` image, tests it and only then tags it ``:plone62``. Add the Plone 6.2
+  migration guide (``docs/plone62-migration.md``)
+  [remdub]
+
+- WEB-4533 : Stop checking out collective.messagesviewlet (its ``plone62`` branch was
+  deleted once merged, so the image no longer built), imio.smartweb.locales (and drop its
+  1.1.51 pin, which overrode buildout.smartweb's), collective.timedevents and imio.gdpr.
+  Use the native 2.0.0 releases that buildout.smartweb pins
+  [remdub]
+
 
 1.6.26 (2026-11-12)
 -------------------
