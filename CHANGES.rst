@@ -23,6 +23,11 @@
   Use the native 2.0.0 releases that buildout.smartweb pins
   [remdub]
 
+- WEB-4533 : Pin imio.smartweb.common 2.0.0 (native namespace). The image no longer
+  checks it out, and dev checks it out from ``main``: its ``plone62`` branch was deleted
+  once merged
+  [remdub]
+
 
 1.6.26 (2026-11-12)
 -------------------
