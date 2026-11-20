@@ -36,6 +36,10 @@
   native 2.0.0 releases that buildout.smartweb pins
   [boulch]
 
+- WEB-4533 : Pin imio.news.core 2.0.0 (native namespace). The image no longer checks it
+  out, and dev checks it out from ``main``
+  [boulch]
+
 
 1.6.26 (2026-11-12)
 -------------------

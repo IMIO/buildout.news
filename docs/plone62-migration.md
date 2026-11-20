@@ -9,12 +9,12 @@ describes. This page covers only what is specific to News: the packages it
 checks out, what changed in this repository, and what's left before `plone62`
 can be merged into `main`.
 
-Last updated: 2026-11-19.
+Last updated: 2026-11-20.
 
 ## Status
 
-**16 packages**: **8 done** (released, pinned, the image installs the
-release) · **1 merged**, not released · **3 PRs open** · **4 branches
+**16 packages**: **9 done** (released, pinned, the image installs the
+release) · **1 merged**, not released · **2 PRs open** · **4 branches
 pushed**, no PR yet
 
 ✅ done · ⬜ to do · ➖ not applicable · 🚧 its pinned release calls
@@ -22,7 +22,6 @@ pushed**, no PR yet
 
 | Package | Checked out by | Branch | PR | Merged | Released | Pinned |
 |---|:-:|:-:|:-:|:-:|:-:|:-:|
-| [imio.news.core](#imionewscore-and-imionewspolicy) | dev, prod | `plone62` | [#15](https://github.com/IMIO/imio.news.core/pull/15) | ⬜ | ⬜ | ⬜ |
 | [imio.omnia.core](https://github.com/IMIO/buildout.smartweb/blob/plone62/docs/native-namespaces-packages.md#imioomniacore) | prod | `plone62` | ⬜ | ⬜ | ⬜ | ⬜ |
 | [imio.omnia.tinymce](https://github.com/IMIO/buildout.smartweb/blob/plone62/docs/native-namespaces-packages.md#imioomniatinymce) | prod | `plone62` | ⬜ | ⬜ | ⬜ | ⬜ |
 | [imio.helpers](https://github.com/IMIO/buildout.smartweb/blob/plone62/docs/native-namespaces-packages.md#imiohelpers) 🚧 | dev, prod | `plone62` | ⬜ | ⬜ | ⬜ | ⬜ |
@@ -35,6 +34,7 @@ pushed**, no PR yet
 | [collective.privacy](https://github.com/IMIO/buildout.smartweb/blob/plone62/docs/native-namespaces-packages.md#collectiveprivacy) | ➖ | ➖ | [#22](https://github.com/collective/collective.privacy/pull/22) | ✅ | 2.0.0 | ✅ |
 | [collective.timedevents](https://github.com/IMIO/buildout.smartweb/blob/plone62/docs/native-namespaces-packages.md#collectivetimedevents) | ➖ | ➖ | [#13](https://github.com/collective/collective.timedevents/pull/13) | ✅ | 2.0.0 | ✅ |
 | [imio.gdpr](https://github.com/IMIO/buildout.smartweb/blob/plone62/docs/native-namespaces-packages.md#imiogdpr) | ➖ | ➖ | [#5](https://github.com/IMIO/imio.gdpr/pull/5) | ✅ | 2.0.0 | ✅ |
+| [imio.news.core](#imionewscore-and-imionewspolicy) | dev | `main` | [#15](https://github.com/IMIO/imio.news.core/pull/15) | ✅ | 2.0.0 | ✅ |
 | [imio.news.policy](#imionewscore-and-imionewspolicy) | dev | `main` | [#12](https://github.com/IMIO/imio.news.policy/pull/12) | ✅ | 2.0.0 | ✅ |
 | [imio.smartweb.common](https://github.com/IMIO/buildout.smartweb/blob/plone62/docs/native-namespaces-packages.md#imiosmartwebcommon-core-locales-policy) | dev | `main` | [#37](https://github.com/IMIO/imio.smartweb.common/pull/37) | ✅ | 2.0.0 | ✅ |
 | [imio.smartweb.locales](https://github.com/IMIO/buildout.smartweb/blob/plone62/docs/native-namespaces-packages.md#imiosmartwebcommon-core-locales-policy) | ➖ | ➖ | [#4](https://github.com/IMIO/imio.smartweb.locales/pull/4) | ✅ | 2.0.0 | ✅ |
@@ -44,8 +44,8 @@ Columns:
 - **Checked out by**: the `auto-checkout` of `dev.cfg` (dev) and `prod.cfg`
   (prod, so the Docker image). A package checked out by prod only runs as a
   release on a dev instance, and one checked out by dev only
-  (imio.news.policy, imio.smartweb.common) runs as its pinned release in the
-  image. ➖: no
+  (imio.news.core, imio.news.policy, imio.smartweb.common) runs as its
+  pinned release in the image. ➖: no
   longer checked out, the pinned release is used.
 - **Branch**: the branch mr.developer checks out. It comes from this
   repository's `sources.cfg` for imio.news.core, imio.news.policy and
@@ -63,14 +63,13 @@ News packages, [described below](#imionewscore-and-imionewspolicy).
 
 ### Open pull requests
 
-- [ ] imio.news.core [#15](https://github.com/IMIO/imio.news.core/pull/15):
-  review and merge. imio.news.policy
-  [#12](https://github.com/IMIO/imio.news.policy/pull/12) is merged and
-  released as 2.0.0.
+- [x] imio.news.core [#15](https://github.com/IMIO/imio.news.core/pull/15)
+  and imio.news.policy [#12](https://github.com/IMIO/imio.news.policy/pull/12):
+  merged and released as 2.0.0.
 - [ ] imio.news.policy's `base.cfg` (still in 2.0.0) checks out
-  imio.news.core in a `[sources]` section of its own, because "buildout.news
-  has no plone62 branch yet". It has one now: extend this repository's
-  `sources.cfg` from the `plone62` branch instead.
+  imio.news.core from its `plone62` branch, in a `[sources]` section of its
+  own. imio.news.core 2.0.0 is released now: drop that checkout and use the
+  release.
 
 The PRs of the shared packages are tracked in the
 [SmartWeb guide](https://github.com/IMIO/buildout.smartweb/blob/plone62/docs/native-namespaces-migration.md#open-pull-requests).
@@ -106,11 +105,15 @@ The PRs of the shared packages are tracked in the
 - [x] collective.fingerpointing and collective.privacy: dropped from
   `auto-checkout` (2026-11-20). buildout.smartweb pins their native 2.0.0,
   which no longer calls `pkg_resources`.
+- [x] imio.news.core: dropped from `prod.cfg` (2026-11-20). `versions.cfg`
+  pins 2.0.0 in place of 1.2.30, so the image installs the release.
+  `dev.cfg` still checks it out, from `main` now (this repository's
+  `sources.cfg`).
 - [ ] `sources.cfg` has a pas.plugins.kimug line that no config checks out:
   delete it. buildout.smartweb pins 2.0.0.
 - [ ] Make `dev.cfg` and `prod.cfg` check out the same packages. Today only
   prod checks out imio.omnia.core and imio.omnia.tinymce, so a dev instance
-  doesn't run the code of the image. imio.news.policy and
+  doesn't run the code of the image. imio.news.core, imio.news.policy and
   imio.smartweb.common, checked out by dev only, are intended.
 
 ### Release
@@ -122,11 +125,9 @@ git branch, so the order matters:
   [SmartWeb guide](https://github.com/IMIO/buildout.smartweb/blob/plone62/docs/native-namespaces-migration.md#release).
   imio.smartweb.common is done: 2.0.0 is released and pinned in
   `versions.cfg`.
-- [ ] imio.news.core, as 2.0.0, as the SmartWeb guide does for the other
-  packages: it drops Plone 6.1. imio.news.policy 2.0.0 is already out: it
-  requires imio.news.core without a version, so it doesn't wait for it.
-- [ ] Pin it in `versions.cfg`, replacing the old-style pin (imio.news.core
-  1.2.30). Then drop the checkout and the `sources.cfg` line.
+- [x] imio.news.core and imio.news.policy: 2.0.0 released and pinned in
+  `versions.cfg` (they drop Plone 6.1). `dev.cfg` still checks them out,
+  from `main`.
 
 ### Check by hand on a News site
 
@@ -201,7 +202,8 @@ of 1.2.65. A dev instance checks out `main`
 
 imio.news.policy, from `prod.cfg` only, for the same reason: the image
 installs the native 2.0.0, which `versions.cfg` pins in place of 1.1.11. A
-dev instance checks out `main`.
+dev instance checks out `main`. Same for imio.news.core (2.0.0 in place of
+1.2.30).
 
 collective.fingerpointing and collective.privacy: both now come from the
 native 2.0.0 releases that buildout.smartweb pins.
@@ -211,9 +213,9 @@ native 2.0.0 releases that buildout.smartweb pins.
 **Namespaces** `imio`, `imio.news` · **Repositories**
 [IMIO/imio.news.core](https://github.com/IMIO/imio.news.core) and
 [IMIO/imio.news.policy](https://github.com/IMIO/imio.news.policy), branch
-`plone62` (policy: `main`) · **Variant**
+`main` · **Variant**
 [setup.py](https://github.com/IMIO/buildout.smartweb/blob/plone62/docs/native-namespaces-migration.md#the-migration-recipe)
-· **Checked out by** `dev.cfg`, `prod.cfg` (policy: `dev.cfg` only) ·
+· **Checked out by** `dev.cfg` ·
 **Older stacks** (Plone 6.1) stay on 1.2.x and 1.1.x
 
 Migrated by a colleague on 2026-11-18. Each branch is 3 commits ahead of
@@ -231,7 +233,10 @@ Migrated by a colleague on 2026-11-18. Each branch is 3 commits ahead of
 
 imio.news.policy is merged into `main`
 ([#12](https://github.com/IMIO/imio.news.policy/pull/12)) and released as
-**2.0.0** on 2026-11-19 (Python 3.12+, Plone 6.2 only).
+**2.0.0** on 2026-11-19 (Python 3.12+, Plone 6.2 only). imio.news.core is
+merged into `main` ([#15](https://github.com/IMIO/imio.news.core/pull/15))
+and released as **2.0.0** on 2026-11-20. `versions.cfg` pins both, so the
+image installs the releases.
 
 ## Testing
 
