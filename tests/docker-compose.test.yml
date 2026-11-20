@@ -1,0 +1,52 @@
+# Stack for `make test` and the CI image tests: the production image built from this
+# checkout, with throwaway Postgres and memcached. No fixed host port and nothing
+# mounted from var/, so it can run next to the dev instance.
+# No Solr: imio.news.policy installs collective.solr but leaves it inactive, so a
+# fresh site searches with the Plone catalog.
+services:
+  instance:
+    build: ..
+    depends_on:
+      postgres:
+        condition: service_healthy
+      memcached:
+        condition: service_started
+    environment:
+      - ENV=dev
+      - MEMCACHE_SERVER=memcached
+      - MEMCACHE_DEFAULT_AGE=10800
+      - RELSTORAGE_HOSTNAME=postgres
+      - RELSTORAGE_PORT=5432
+      - RELSTORAGE_DB=news_test
+      - RELSTORAGE_USER=news_test
+      - RELSTORAGE_PASSWORD=news_test
+      - ZODB_CACHE_SIZE=30000
+      - ZEO_CLIENT_CACHE_SIZE=256MB
+      - PROJECT_ID=news-test
+      - ACTIVE_BIGBANG=True
+      - PLONE_EXTENSION_IDS=plone.app.caching:default,plonetheme.barceloneta:default,imio.news.policy:default
+      - DEFAULT_LANGUAGE=fr
+      - ADMIN_PASSWORD=admin
+    ports:
+      - "127.0.0.1::8080"
+      - "127.0.0.1::8081"
+    healthcheck:
+      # big.bang creates the site before Zope serves, which takes longer than the
+      # Dockerfile healthcheck allows.
+      test: ["CMD-SHELL", "wget -q -O - http://127.0.0.1:8080/ok | grep -q OK"]
+      interval: 10s
+      timeout: 10s
+      retries: 3
+      start_period: 300s
+  postgres:
+    image: postgres:17.6
+    environment:
+      - POSTGRES_DB=news_test
+      - POSTGRES_USER=news_test
+      - POSTGRES_PASSWORD=news_test
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U news_test -d news_test"]
+      interval: 2s
+      retries: 30
+  memcached:
+    image: memcached:1.5.20
