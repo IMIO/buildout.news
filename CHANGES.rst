@@ -40,6 +40,11 @@
   out, and dev checks it out from ``main``
   [boulch]
 
+- WEB-4533 : Stop checking out collective.behavior.talcondition. Use the native 2.0.0
+  release that buildout.smartweb pins. Check out collective.upgrade from ``master``
+  (buildout.smartweb's branch, where #20 is merged) instead of ``plone61``
+  [remdub]
+
 
 1.6.26 (2026-11-12)
 -------------------
