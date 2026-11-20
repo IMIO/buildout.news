@@ -32,6 +32,10 @@
   out, and dev checks it out from ``main``: its ``plone62`` branch was deleted once merged
   [boulch]
 
+- WEB-4533 : Stop checking out collective.fingerpointing and collective.privacy. Use the
+  native 2.0.0 releases that buildout.smartweb pins
+  [boulch]
+
 
 1.6.26 (2026-11-12)
 -------------------

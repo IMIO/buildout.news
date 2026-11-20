@@ -13,8 +13,8 @@ Last updated: 2026-11-19.
 
 ## Status
 
-**16 packages**: **6 done** (released, pinned, the image installs the
-release) · **2 merged**, not released · **4 PRs open** · **4 branches
+**16 packages**: **8 done** (released, pinned, the image installs the
+release) · **1 merged**, not released · **3 PRs open** · **4 branches
 pushed**, no PR yet
 
 ✅ done · ⬜ to do · ➖ not applicable · 🚧 its pinned release calls
@@ -29,10 +29,10 @@ pushed**, no PR yet
 | [imio.pyutils](https://github.com/IMIO/buildout.smartweb/blob/plone62/docs/native-namespaces-packages.md#imiopyutils) | dev, prod | `master` | [#4](https://github.com/IMIO/imio.pyutils/pull/4) | ✅ | ⬜ | ⬜ |
 | [collective.autopublishing](https://github.com/IMIO/buildout.smartweb/blob/plone62/docs/native-namespaces-packages.md#collectiveautopublishing) | dev, prod | `plone62` | [#12](https://github.com/collective/collective.autopublishing/pull/12) | ⬜ | ⬜ | ⬜ |
 | [collective.behavior.talcondition](https://github.com/IMIO/buildout.smartweb/blob/plone62/docs/native-namespaces-packages.md#collectivebehaviortalcondition) | dev, prod | `plone62` | ⬜ | ⬜ | ⬜ | ⬜ |
-| [collective.fingerpointing](https://github.com/IMIO/buildout.smartweb/blob/plone62/docs/native-namespaces-packages.md#collectivefingerpointing) 🚧 | dev, prod | `master` | [#110](https://github.com/collective/collective.fingerpointing/pull/110) | ✅ | ⬜ | ⬜ |
-| [collective.privacy](https://github.com/IMIO/buildout.smartweb/blob/plone62/docs/native-namespaces-packages.md#collectiveprivacy) 🚧 | dev, prod | `plone62` | [#22](https://github.com/collective/collective.privacy/pull/22) | ⬜ | ⬜ | ⬜ |
 | [collective.upgrade](https://github.com/IMIO/buildout.smartweb/blob/plone62/docs/native-namespaces-packages.md#collectiveupgrade) | dev, prod | `plone61` | [#20](https://github.com/collective/collective.upgrade/pull/20) | ⬜ | ⬜ | ➖ |
+| [collective.fingerpointing](https://github.com/IMIO/buildout.smartweb/blob/plone62/docs/native-namespaces-packages.md#collectivefingerpointing) | ➖ | ➖ | [#110](https://github.com/collective/collective.fingerpointing/pull/110) | ✅ | 2.0.0 | ✅ |
 | [collective.messagesviewlet](https://github.com/IMIO/buildout.smartweb/blob/plone62/docs/native-namespaces-packages.md#collectivemessagesviewlet) | ➖ | ➖ | [#24](https://github.com/collective/collective.messagesviewlet/pull/24) | ✅ | 2.0.0 | ✅ |
+| [collective.privacy](https://github.com/IMIO/buildout.smartweb/blob/plone62/docs/native-namespaces-packages.md#collectiveprivacy) | ➖ | ➖ | [#22](https://github.com/collective/collective.privacy/pull/22) | ✅ | 2.0.0 | ✅ |
 | [collective.timedevents](https://github.com/IMIO/buildout.smartweb/blob/plone62/docs/native-namespaces-packages.md#collectivetimedevents) | ➖ | ➖ | [#13](https://github.com/collective/collective.timedevents/pull/13) | ✅ | 2.0.0 | ✅ |
 | [imio.gdpr](https://github.com/IMIO/buildout.smartweb/blob/plone62/docs/native-namespaces-packages.md#imiogdpr) | ➖ | ➖ | [#5](https://github.com/IMIO/imio.gdpr/pull/5) | ✅ | 2.0.0 | ✅ |
 | [imio.news.policy](#imionewscore-and-imionewspolicy) | dev | `main` | [#12](https://github.com/IMIO/imio.news.policy/pull/12) | ✅ | 2.0.0 | ✅ |
@@ -103,6 +103,9 @@ The PRs of the shared packages are tracked in the
   `versions.cfg` pins 2.0.0 in place of 1.1.11, so the image installs the
   release. `dev.cfg` still checks it out, from `main` now (this repository's
   `sources.cfg`).
+- [x] collective.fingerpointing and collective.privacy: dropped from
+  `auto-checkout` (2026-11-20). buildout.smartweb pins their native 2.0.0,
+  which no longer calls `pkg_resources`.
 - [ ] `sources.cfg` has a pas.plugins.kimug line that no config checks out:
   delete it. buildout.smartweb pins 2.0.0.
 - [ ] Make `dev.cfg` and `prod.cfg` check out the same packages. Today only
@@ -199,6 +202,9 @@ of 1.2.65. A dev instance checks out `main`
 imio.news.policy, from `prod.cfg` only, for the same reason: the image
 installs the native 2.0.0, which `versions.cfg` pins in place of 1.1.11. A
 dev instance checks out `main`.
+
+collective.fingerpointing and collective.privacy: both now come from the
+native 2.0.0 releases that buildout.smartweb pins.
 
 ## imio.news.core and imio.news.policy
 
