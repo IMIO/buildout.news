@@ -45,6 +45,10 @@
   (buildout.smartweb's branch, where #20 is merged) instead of ``plone61``
   [remdub]
 
+- WEB-4533 : Stop checking out collective.autopublishing and collective.upgrade. Use the
+  native 2.0.0 and 3.0.0 releases that buildout.smartweb pins
+  [remdub]
+
 
 1.6.26 (2026-11-12)
 -------------------

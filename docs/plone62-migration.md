@@ -9,12 +9,12 @@ describes. This page covers only what is specific to News: the packages it
 checks out, what changed in this repository, and what's left before `plone62`
 can be merged into `main`.
 
-Last updated: 2026-11-20.
+Last updated: 2026-11-25.
 
 ## Status
 
-**16 packages**: **10 done** (released, pinned, the image installs the
-release) · **3 merged**, not released · **3 branches pushed**, no PR yet
+**16 packages**: **12 done** (released, pinned, the image installs the
+release) · **1 merged**, not released · **3 branches pushed**, no PR yet
 
 ✅ done · ⬜ to do · ➖ not applicable · 🚧 its pinned release calls
 `pkg_resources` and fails on Plone 6.2.3
@@ -25,13 +25,13 @@ release) · **3 merged**, not released · **3 branches pushed**, no PR yet
 | [imio.omnia.tinymce](https://github.com/IMIO/buildout.smartweb/blob/plone62/docs/native-namespaces-packages.md#imioomniatinymce) | prod | `plone62` | ⬜ | ⬜ | ⬜ | ⬜ |
 | [imio.helpers](https://github.com/IMIO/buildout.smartweb/blob/plone62/docs/native-namespaces-packages.md#imiohelpers) 🚧 | dev, prod | `plone62` | ⬜ | ⬜ | ⬜ | ⬜ |
 | [imio.pyutils](https://github.com/IMIO/buildout.smartweb/blob/plone62/docs/native-namespaces-packages.md#imiopyutils) | dev, prod | `master` | [#4](https://github.com/IMIO/imio.pyutils/pull/4) | ✅ | ⬜ | ⬜ |
-| [collective.autopublishing](https://github.com/IMIO/buildout.smartweb/blob/plone62/docs/native-namespaces-packages.md#collectiveautopublishing) | dev, prod | `master` | [#12](https://github.com/collective/collective.autopublishing/pull/12) | ✅ | ⬜ | ⬜ |
-| [collective.upgrade](https://github.com/IMIO/buildout.smartweb/blob/plone62/docs/native-namespaces-packages.md#collectiveupgrade) | dev, prod | `master` | [#20](https://github.com/collective/collective.upgrade/pull/20) | ✅ | ⬜ | ➖ |
+| [collective.autopublishing](https://github.com/IMIO/buildout.smartweb/blob/plone62/docs/native-namespaces-packages.md#collectiveautopublishing) | ➖ | ➖ | [#12](https://github.com/collective/collective.autopublishing/pull/12) | ✅ | 2.0.0 | ✅ |
 | [collective.behavior.talcondition](https://github.com/IMIO/buildout.smartweb/blob/plone62/docs/native-namespaces-packages.md#collectivebehaviortalcondition) | ➖ | ➖ | [#17](https://github.com/collective/collective.behavior.talcondition/pull/17) | ✅ | 2.0.0 | ✅ |
 | [collective.fingerpointing](https://github.com/IMIO/buildout.smartweb/blob/plone62/docs/native-namespaces-packages.md#collectivefingerpointing) | ➖ | ➖ | [#110](https://github.com/collective/collective.fingerpointing/pull/110) | ✅ | 2.0.0 | ✅ |
 | [collective.messagesviewlet](https://github.com/IMIO/buildout.smartweb/blob/plone62/docs/native-namespaces-packages.md#collectivemessagesviewlet) | ➖ | ➖ | [#24](https://github.com/collective/collective.messagesviewlet/pull/24) | ✅ | 2.0.0 | ✅ |
 | [collective.privacy](https://github.com/IMIO/buildout.smartweb/blob/plone62/docs/native-namespaces-packages.md#collectiveprivacy) | ➖ | ➖ | [#22](https://github.com/collective/collective.privacy/pull/22) | ✅ | 2.0.0 | ✅ |
 | [collective.timedevents](https://github.com/IMIO/buildout.smartweb/blob/plone62/docs/native-namespaces-packages.md#collectivetimedevents) | ➖ | ➖ | [#13](https://github.com/collective/collective.timedevents/pull/13) | ✅ | 2.0.0 | ✅ |
+| [collective.upgrade](https://github.com/IMIO/buildout.smartweb/blob/plone62/docs/native-namespaces-packages.md#collectiveupgrade) | ➖ | ➖ | [#20](https://github.com/collective/collective.upgrade/pull/20) | ✅ | 3.0.0 | ✅ |
 | [imio.gdpr](https://github.com/IMIO/buildout.smartweb/blob/plone62/docs/native-namespaces-packages.md#imiogdpr) | ➖ | ➖ | [#5](https://github.com/IMIO/imio.gdpr/pull/5) | ✅ | 2.0.0 | ✅ |
 | [imio.news.core](#imionewscore-and-imionewspolicy) | dev | `main` | [#15](https://github.com/IMIO/imio.news.core/pull/15) | ✅ | 2.0.0 | ✅ |
 | [imio.news.policy](#imionewscore-and-imionewspolicy) | dev | `main` | [#12](https://github.com/IMIO/imio.news.policy/pull/12) | ✅ | 2.0.0 | ✅ |
@@ -51,8 +51,7 @@ Columns:
   from buildout.smartweb's `sources.cfg` for the others.
 - **PR**: the pull request that merges the native branch. ⬜: none opened yet.
 - **Released**: the native version on PyPI. **Pinned**: a `versions.cfg`
-  (this one or buildout.smartweb's) pins it. ➖: collective.upgrade is never
-  pinned, every config checks it out.
+  (this one or buildout.smartweb's) pins it.
 
 Each row links to the package's details in the SmartWeb guide, except the two
 News packages, [described below](#imionewscore-and-imionewspolicy).
@@ -116,7 +115,12 @@ The PRs of the shared packages are tracked in the
   branch buildout.smartweb's `sources.cfg` names, into which
   [#20](https://github.com/collective/collective.upgrade/pull/20) merged the
   native namespace and the Plone 6.2 support. `plone61` is 34 commits behind
-  `master` and lacks the Plone 6.2 support. Still checked out: not released.
+  `master` and lacks the Plone 6.2 support. Since released: see the next
+  item.
+- [x] collective.autopublishing and collective.upgrade: dropped from
+  `auto-checkout` (2026-11-25). buildout.smartweb pins their native
+  releases, collective.autopublishing 2.0.0 and collective.upgrade 3.0.0
+  (Plone 6.2 only; 2.0.0, released from `plone61`, is for Plone 6.1).
 - [ ] `sources.cfg` has a pas.plugins.kimug line that no config checks out:
   delete it. buildout.smartweb pins 2.0.0.
 - [ ] Make `dev.cfg` and `prod.cfg` check out the same packages. Today only
@@ -218,9 +222,8 @@ collective.fingerpointing and collective.privacy: both now come from the
 native 2.0.0 releases that buildout.smartweb pins. Same for
 collective.behavior.talcondition.
 
-collective.upgrade is still checked out, from `master` now instead of
-`plone61`: this repository's `sources.cfg` no longer overrides
-buildout.smartweb's.
+collective.autopublishing and collective.upgrade: both now come from the
+native releases that buildout.smartweb pins (2.0.0 and 3.0.0).
 
 ## imio.news.core and imio.news.policy
 
@@ -267,10 +270,10 @@ There is no Solr in the test stack: imio.news.policy installs collective.solr
 but leaves it inactive. `tests/log_allowlist.txt` lists the log records that
 are expected, and why.
 
-Last run 2026-11-20, with collective.behavior.talcondition no longer checked
-out (the image installs its 2.0.0) and collective.upgrade checked out from
-`master`: 12 passed (the 11 generic checks, no pending upgrade step
-included, and the News test).
+Last run 2026-11-25, with collective.autopublishing and collective.upgrade
+no longer checked out (the image installs their 2.0.0 and 3.0.0): 12 passed
+(the 11 generic checks, no pending upgrade step included, and the News
+test).
 
 **On CI**: each push to `plone62` runs `plone62.yml`. It builds the image
 once as `:{short_sha}`, tests it with `tests.yml`, scans it with trivy, and
