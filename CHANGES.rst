@@ -49,6 +49,10 @@
   native 2.0.0 and 3.0.0 releases that buildout.smartweb pins
   [remdub]
 
+- WEB-4533 : Remove ``plone62.yml``: ``plone62`` is merged into ``main`` (#8). Update the
+  migration guide and the CI/CD workflows README
+  [remdub]
+
 
 1.6.26 (2026-11-12)
 -------------------

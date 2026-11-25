@@ -1,13 +1,16 @@
 # Migrating News to Plone 6.2.3
 
-Tracks the move of News (branch `plone62`, WEB-4533) to Plone 6.2.3 and
-Python 3.14. Most of the work is shared with SmartWeb: this buildout extends
+Tracks the move of News (WEB-4533) to Plone 6.2.3 and Python 3.14. The work
+was done on the `plone62` branch, which
+[#8](https://github.com/IMIO/buildout.news/pull/8) squash-merged into `main`
+on 2026-11-23 (`59f6bbb`). Since then, a push to `main` deploys the Plone 6.2
+image to staging. Most of the work is shared with SmartWeb: this buildout extends
 the `plone62` pins and sources of buildout.smartweb, and the packages leave
 old-style namespace packages (PEP 420) the way the
 [SmartWeb migration guide](https://github.com/IMIO/buildout.smartweb/blob/plone62/docs/native-namespaces-migration.md)
 describes. This page covers only what is specific to News: the packages it
-checks out, what changed in this repository, and what's left before `plone62`
-can be merged into `main`.
+checks out, what changed in this repository, and what's left before the
+Plone 6.2 stack goes to production.
 
 Last updated: 2026-11-25.
 
@@ -157,20 +160,28 @@ git branch, so the order matters:
 - [ ] Health probes on port 8081 (`/live`, `/ready`, `/startup`) and
   `@@metrics`.
 
-### When `plone62` is merged into `main`
+### Since `plone62` was merged into `main`
 
-- [ ] `base.cfg`: extend buildout.smartweb's `main` again (once its own
-  `plone62` is merged).
+- [ ] `base.cfg`: extend buildout.smartweb's `main` again, as soon as its own
+  `plone62` is merged ([#18](https://github.com/IMIO/buildout.smartweb/pull/18),
+  still open). `base.cfg` extends that branch by URL, so if it is deleted,
+  buildout can no longer read `base.cfg` and the image no longer builds.
 - [x] `sources.cfg`: back to `main`/`master`, or the lines dropped once the
   packages are released. Every line names `main` (2026-11-20), the
   collective.upgrade one is gone.
-- [ ] Delete `.github/workflows/plone62.yml` and its section in
-  `.github/workflows/README.md`.
+- [x] `.github/workflows/plone62.yml` and its section in
+  `.github/workflows/README.md` deleted (2026-11-25), together with the
+  `plone62` branch.
 - [ ] `dev.yml` and `staging.yml`: test the image before tagging it, as
-  `plone62.yml` does, so a failing image never gets the `:dev` or `:staging`
-  tag.
+  `plone62.yml` did (see `59f6bbb`), so a failing image never gets the
+  `:dev` or `:staging` tag. Until then, a push to `main` deploys staging
+  without running the tests.
 
 ## What changed in buildout.news
+
+Merged into `main` as a single commit, `59f6bbb`
+([#8](https://github.com/IMIO/buildout.news/pull/8)). The hashes below are
+the commits of that pull request.
 
 ### Plone 6.2.3 (`8cdacbf`)
 
@@ -199,7 +210,8 @@ tracing, inactive until `OTEL_EXPORTER_OTLP_ENDPOINT` is set.
 ### Image tests and CI
 
 As in buildout.smartweb and buildout.events: `make test`, `tests/`, and the
-`tests.yml` and `plone62.yml` workflows ([Testing](#testing)).
+`tests.yml` workflow ([Testing](#testing)). Until the merge, `plone62.yml`
+built, tested and tagged the `plone62` image. It was deleted on 2026-11-25.
 
 ### Checkouts dropped
 
@@ -275,7 +287,8 @@ no longer checked out (the image installs their 2.0.0 and 3.0.0): 12 passed
 (the 11 generic checks, no pending upgrade step included, and the News
 test).
 
-**On CI**: each push to `plone62` runs `plone62.yml`. It builds the image
-once as `:{short_sha}`, tests it with `tests.yml`, scans it with trivy, and
-tags it `:plone62` only if the tests pass. Nothing is deployed. See
-[the CI/CD workflows](../.github/workflows/README.md#plone62yml--publish-and-test-plone62-image).
+**On CI**: `tests.yml` runs on each pull request. A push to `main` runs
+`staging.yml`, which builds `:staging` and deploys it to staging, without
+running the tests yet ([What's left](#since-plone62-was-merged-into-main)).
+See
+[the CI/CD workflows](../.github/workflows/README.md#stagingyml--publish-and-deploy-staging-image).
